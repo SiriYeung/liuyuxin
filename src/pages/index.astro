@@ -1,5 +1,4 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -7,5 +6,50 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-	<Welcome />
+	<section class="artist-profile">
+		<h1>刘雨昕</h1>
+		<div class="artist-info">
+			<img src="/images/liuyuxin.jpg" alt="刘雨昕" class="artist-photo" />
+			<p>刘雨昕是中国著名的歌手和舞者，以其独特的音乐风格和舞台表现力闻名。她是THE9女团的成员之一。</p>
+		</div>
+		<div class="artist-history">
+			<h2>历史</h2>
+			<p>刘雨昕于1997年出生于中国湖南省，2016年通过参加选秀节目《蜜蜂少女队》出道。2020年参加《青春有你2》并获得第二名，成为THE9女团成员。</p>
+		</div>
+		<div class="artist-awards">
+			<h2>奖项</h2>
+			<ul>
+				<li>2020年《青春有你2》第二名</li>
+				<li>2021年发行个人单曲《EPSILON》</li>
+				<li>2022年获得亚洲音乐盛典最佳新人奖</li>
+			</ul>
+		</div>
+		<style>
+			.artist-profile {
+				max-width: 800px;
+				margin: 0 auto;
+				padding: 20px;
+				font-family: Arial, sans-serif;
+			}
+			.artist-info {
+				display: flex;
+				align-items: center;
+				gap: 20px;
+				margin-bottom: 20px;
+			}
+			.artist-photo {
+				width: 200px;
+				height: 200px;
+				object-fit: cover;
+				border-radius: 10px;
+			}
+			.artist-history, .artist-awards {
+				margin-bottom: 20px;
+			}
+			.artist-awards ul {
+				list-style-type: disc;
+				padding-left: 20px;
+			}
+		</style>
+	</section>
 </Layout>
